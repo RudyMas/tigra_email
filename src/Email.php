@@ -1,6 +1,6 @@
 <?php
 
-namespace Tiger;
+namespace Tigra;
 
 use Latte\Engine;
 use Nette\Mail\Message;
@@ -14,7 +14,7 @@ use Nette\Mail\SmtpMailer;
  * @copyright   2022, rmsoft.be. (https://www.rmsoft.be/)
  * @license     https://opensource.org/licenses/GPL-3.0 GNU General Public License, version 3 (GPL-3.0)
  * @version     7.4.1.0
- * @package     Tiger
+ * @package     Tigra
  */
 class Email
 {
@@ -61,7 +61,7 @@ class Email
     }
 
     /**
-     * Use this function when you use it in the Tiger Framework
+     * Use this function when you use it in the Tigra Framework
      */
     public function config(): void
     {
@@ -183,13 +183,13 @@ class Email
     }
 
     /**
-     * Use Latte for rendering HTML E-mails in the Tiger Framework
+     * Use Latte for rendering HTML E-mails in the Tigra Framework
      *
      * @param string $latteFile
      * @param array $data
      * @return string
      */
-    public function tigerRenderHtml(string $latteFile, array $data): string
+    public function tigraRenderHtml(string $latteFile, array $data): string
     {
         $latte = new Engine();
         $latte->setTempDirectory(SYSTEM_ROOT . '/tmp/latte');
